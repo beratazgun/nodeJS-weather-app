@@ -6,7 +6,7 @@ const weatherResult = document.querySelector(".weather-result")
 wheatherForm.addEventListener("click", (e) => {
     e.preventDefault()
     const location = search.value
-    fetch('https://bero-weather-app.herokuapp.com' + 'weather?location=' + location).then((response) => {
+    fetch('https://bero-weather-app.herokuapp.com' + '/weather?location=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)
