@@ -5,6 +5,7 @@ const request = require("request")
 
 
 app = express()
+const port = process.env.PORT || 3000
 
 // templates dosyasının konumu ayarlanıyor
 const viewsPath = path.join(__dirname, "../templates/views")
@@ -76,8 +77,8 @@ app.get("*", (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log("server is running at 3000 port")
+app.listen(port, () => {
+    console.log("server is running at"  + port)
 })
 
 
