@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .index-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #2C2C2C;
+            width: 600px;
+            height: 300px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .home-text {
+            font-family: 'DynaPuff', cursive;
+            font-size: 25px;
+            color: orange;
+            display: inline;
+            position: relative;
+            top: 10px;
+        }
+
+        .form-control {
+            width: 300px !important;
+        }
+
+        .form-container {
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            left: 780px;
+            top: 65%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form-label {
+            color: orange;
+            font-family: 'DynaPuff', cursive;
+            font-size: 2rem;
+        }
+
+        body {
+            font-family: 'DynaPuff', cursive;
+            color: orange;
+        }
+
+        .weather-result {
+            font-family: 'DynaPuff', cursive;
+            color: orange;
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            left: 720px;
+            top: 88%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            text-align: center;
+
+        }
+    </style>
+
+    {{> header}}
+    <div class="index-container">
+        <p class="home-text">Use this site to get your weather!</p>
+    </div>
+
+    <form class="form-container">
+        <div class="input-container mb-3">
+            <label class="form-label">City</label>
+            <input class="form-control" placeholder="Just City Name">
+        </div>
+        <button class="search-button btn btn-outline-warning">Search</button>
+    </form>
+
+    <h1 class="weather-result"></h1>
+
+    {{> footer}}
+
+    <script src="/js/app.js"></script>
+</body>
+
+
+</html>

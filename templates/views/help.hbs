@@ -1,0 +1,22 @@
+<style>
+    .help-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .help-text {
+        font-family: 'DynaPuff', cursive;
+        font-size: 25px;
+        color: orange;
+    }
+</style>
+{{> header}}
+
+<div class="help-container">
+    <h1 class="help-text"> {{title}} </h1>
+    <p class="help-text">Mail: {{mail}} </p>
+</div>
+
+{{>footer}}x
